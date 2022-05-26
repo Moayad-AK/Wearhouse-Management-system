@@ -17,14 +17,16 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('phone');
-            $table->json('permission');
-            $table->double('salary');
             $table->integer('age');
-            $table->boolean('is_admin');
+            $table->boolean('is_admin')->default(0);
+            $table->string('address');
+
+            $table->double('salary');
+
             $table->rememberToken();
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
     }
