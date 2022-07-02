@@ -4,16 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        "quantity"
+    protected $table = 'orders';
+    protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'quantity',
+        'customer_name',
+        'customer_phone',
+        'enter_date'
     ];
 
-    public function order_detales(){
-        return $this->belongsTo(Order_detales::class,'order_detales_id');
+    public function order_details(): HasMany
+    {
+        return $this->hasMany(OrderDetail::class, 'order_id', 'id');
     }
 }

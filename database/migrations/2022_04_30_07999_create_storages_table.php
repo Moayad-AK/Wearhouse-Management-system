@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('storages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->double( 'storage_size');
+            $table->string('description');
+            $table->string('address');
+
             $table->timestamps();
         });
     }

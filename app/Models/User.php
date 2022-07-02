@@ -24,9 +24,12 @@ class User extends \Illuminate\Foundation\Auth\User
         'name',
         'email',
         'password',
-        'phone_number',
-        'facebook_url',
-        'profile_img_url'
+        'phone',
+        'address',
+        'age',
+        'salary',
+
+
     ];
     protected $hidden = [
         'password',
@@ -36,13 +39,4 @@ class User extends \Illuminate\Foundation\Auth\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function products(){
-        return $this->hasMany(Product::class, 'product_id');
-    }
-
-    public function order_detales(){
-        return $this->hasMany(Order_detales::class,'product_id')->orderBy('date');
-    }
-
- }
+}

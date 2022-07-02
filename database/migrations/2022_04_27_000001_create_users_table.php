@@ -20,9 +20,8 @@ return new class extends Migration
             $table->string('password');
             $table->integer('phone');
             $table->integer('age');
-            $table->boolean('is_admin')->default(0);
+            $table->boolean('is_admin')->default(false);
             $table->string('address');
-
             $table->double('salary');
 
             $table->rememberToken();
