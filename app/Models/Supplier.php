@@ -10,7 +10,7 @@ class Supplier extends Model
 {
     use HasFactory;
 
-    protected $table = "supplier";
+    protected $table = "suppliers";
     protected $primaryKey = "id";
     protected $fillable = [
         'name',
@@ -19,8 +19,8 @@ class Supplier extends Model
         'email'
     ];
 
-    public function storages(): BelongsToMany
-    {
-        return $this->belongsToMany(Storage::class, 'product_in_storages', 'storage_id', 'id');
-    }
+//    public function storages(): BelongsToMany
+//    {
+//        return $this->belongsToMany(Storage::class, 'product_in_storages', 'storage_id', 'id');
+//    }
 }

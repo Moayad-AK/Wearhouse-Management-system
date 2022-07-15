@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->double('size');
             $table->unsignedBigInteger('category_id');
             $table->timestamps();

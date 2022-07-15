@@ -27,7 +27,7 @@ class SupplierStoreRequest extends FormRequest
             'name' => ['required', 'string'],
             'address' => ['required', 'string'],
             'email' => ['required', 'string'],
-            'phone' => ['required', 'integer']
+            'phone_number' => ['required', 'integer']
 
         ];
     }

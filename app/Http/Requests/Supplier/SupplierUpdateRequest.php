@@ -27,7 +27,7 @@ class SupplierUpdateRequest extends FormRequest
             'name' => ['sometimes', 'string'],
             'address' => ['sometimes', 'string'],
             'email' => ['sometimes', 'string'],
-            'phone' => ['sometimes', 'integer']
+            'phone_number' => ['sometimes', 'integer']
         ];
     }
 }
