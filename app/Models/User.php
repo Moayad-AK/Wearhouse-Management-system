@@ -26,8 +26,13 @@ class User extends \Illuminate\Foundation\Auth\User
         'password',
         'phone',
         'address',
-        'age',
+        'birth_date',
+        'employment_date',
         'salary',
+        'status',
+        'jop_title',
+        'is_admin',
+        'gender',
 
 
     ];

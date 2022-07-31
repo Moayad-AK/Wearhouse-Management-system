@@ -19,10 +19,14 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('phone');
-            $table->integer('age');
+            $table->date('birth_date')->nullable();
+            $table->date('employment_date')->nullable();
             $table->boolean('is_admin')->default(false);
             $table->string('address');
+            $table->string('job_title');
+            $table->string('gender');
             $table->double('salary');
+            $table->integer('status');
 
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
