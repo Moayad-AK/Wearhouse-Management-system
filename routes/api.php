@@ -20,6 +20,7 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('products', \App\Http\Controllers\ProductController::class);
     Route::resource('storages', \App\Http\Controllers\StorageController::class);
     Route::resource('suppliers', \App\Http\Controllers\SupplierController::class);
+    Route::post('logout', [\App\Http\Controllers\AuthController::class, "logout"]);
 });
 
 

@@ -89,4 +89,12 @@ class AuthController extends BaseController
 
         ]);
     }
+
+//    public function logout(Request $request): JsonResponse {
+//        auth()->user()->token()->delete();
+//        return response()->json([
+//            'message' => 'Successfully logged out'
+//
+//        ]);
+//    }
 }
